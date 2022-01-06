@@ -47,7 +47,7 @@ C:\xampp\htdocs\konecta\
 
 CONEXION A BD
 ------------
-la conecion a la BD se modifica en el archivo de la siguente ruta:
+en caso de que se deba la conexion a la BD (host, user, password) se modifica en el archivo de la siguente ruta:
 
 \konecta\config\db.php
 
