@@ -53,4 +53,12 @@ en caso de que se deba la conexion a la BD (host, user, password) se modifica en
 
 
 
+ Realizar una consulta que permita conocer cuál es el producto que más stock tiene.
+SELECT * FROM producto WHERE stock = (SELECT MAX(stock) FROM producto);
+
+ Realizar una consulta que permita conocer cuál es el producto más vendido.
+select a.id,nombre,precio,stock,sum(cantidad) as cantidad_vendida from producto as a 
+inner join venta as b on a.id=b.id_producto
+group by 1,2,3,4 order by 4 desc limit 1
+
 
